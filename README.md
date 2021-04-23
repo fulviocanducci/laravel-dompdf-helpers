@@ -14,7 +14,7 @@ composer require canducci/laravel-dompdf-helpers
 ## Use Helpers
 
 ```php
-$instance = report();
+$instance = printer();
 $instance->loadView($view, $data);
 $instance->download(); // or $instance->stream();
 ```
@@ -24,14 +24,14 @@ $instance->download(); // or $instance->stream();
 ### Example 1
 
 ```php
-$instance = report_view($view, $data);
+$instance = printer_view($view, $data);
 $instance->stream(); // or $instance->download();
 ```
 
 ### Example 2
 
 ```php
-return report_view_stream($view, $data); // or report_view_download($view, $data);
+return printer_view_stream($view, $data); // or printer_view_download($view, $data);
 ```
 
 ## Report File
@@ -39,14 +39,14 @@ return report_view_stream($view, $data); // or report_view_download($view, $data
 ### Example 1
 
 ```php
-$instance = report_file($path);
+$instance = printer_file($path);
 $instance->stream(); // or $instance->download();
 ```
 
 ### Example 2
 
 ```php
-return report_file_stream($path); // or report_file_download($path);
+return printer_file_stream($path); // or printer_file_download($path);
 ```
 
 ## Report HTML
@@ -54,12 +54,12 @@ return report_file_stream($path); // or report_file_download($path);
 ### Example 1
 
 ```php
-$instance = report_html($path);
+$instance = printer_html($path);
 $instance->stream(); // or $instance->download();
 ```
 
 ### Example 2
 
 ```php
-return report_html_stream($path); // or report_html_download($path);
+return printer_html_stream($path); // or printer_html_download($path);
 ```

@@ -2,9 +2,9 @@
 
 use Barryvdh\DomPDF\PDF;
 
-if (!function_exists('report'))
+if (!function_exists('printer'))
 {
-    function report(array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF
+    function printer(array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF
     {
         if (function_exists('app')) {
             $instance = app('dompdf.wrapper');
@@ -22,77 +22,77 @@ if (!function_exists('report'))
     }
 }
 
-if (!function_exists('report_view')) 
+if (!function_exists('printer_view')) 
 {
-    function report_view($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF
+    function printer_view($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF
     {
-        return report($options, $paper, $orientation)->loadView($view, $data);
+        return printer($options, $paper, $orientation)->loadView($view, $data);
     }
 }
 
-if (!function_exists('report_view_stream')) 
+if (!function_exists('printer_view_stream')) 
 {
-    function report_view_stream($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_view_stream($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-        return report_view($view, $data, $options, $paper, $orientation)->stream($filename);
+        return printer_view($view, $data, $options, $paper, $orientation)->stream($filename);
     }
 }
 
-if (!function_exists('report_view_download')) 
+if (!function_exists('printer_view_download')) 
 {
-    function report_view_download($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_view_download($view, array $data, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-        return report_view($view, $data, $options, $paper, $orientation)->download($filename);
+        return printer_view($view, $data, $options, $paper, $orientation)->download($filename);
     }
 }
 
-if (!function_exists('report_file')) 
+if (!function_exists('printer_file')) 
 {
-    function report_file($path, array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF 
+    function printer_file($path, array $options = [], $paper = 'a4', $orientation = 'portrait') : PDF 
     {
         if (file_exists($path)) {
-            return report($options, $paper, $orientation)->loadFile($path);
+            return printer($options, $paper, $orientation)->loadFile($path);
         }
         throw new \Exception("File not found", 500);
     }
 }
 
-if (!function_exists('report_file_stream')) 
+if (!function_exists('printer_file_stream')) 
 {
-    function report_file_stream($path, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_file_stream($path, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-       return report_file($path, $options, $paper, $orientation)->stream($filename);
+       return printer_file($path, $options, $paper, $orientation)->stream($filename);
     }
 }
 
-if (!function_exists('report_file_download')) 
+if (!function_exists('printer_file_download')) 
 {
-    function report_file_download($path, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_file_download($path, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-       return report_file($path, $options, $paper, $orientation)->download($filename);
+       return printer_file($path, $options, $paper, $orientation)->download($filename);
     }
 }
 
-if (!function_exists('report_html')) 
+if (!function_exists('printer_html')) 
 {
-    function report_html($html, array $options = [], $paper = 'a4', $orientation = 'portrait'): PDF
+    function printer_html($html, array $options = [], $paper = 'a4', $orientation = 'portrait'): PDF
     {
-        return report($options, $paper, $orientation)->loadHTML($html);
+        return printer($options, $paper, $orientation)->loadHTML($html);
     }
 }
 
-if (!function_exists('report_html_stream')) 
+if (!function_exists('printer_html_stream')) 
 {
-    function report_html_stream($html, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_html_stream($html, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-        return report_html($html, $options, $paper, $orientation)->stream($filename);
+        return printer_html($html, $options, $paper, $orientation)->stream($filename);
     }
 }
 
-if (!function_exists('report_html_download')) 
+if (!function_exists('printer_html_download')) 
 {
-    function report_html_download($html, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
+    function printer_html_download($html, array $options = [], $paper = 'a4', $orientation = 'portrait', $filename = 'document.pdf') 
     {
-        return report_html($html, $options, $paper, $orientation)->download($filename);
+        return printer_html($html, $options, $paper, $orientation)->download($filename);
     }
 }
