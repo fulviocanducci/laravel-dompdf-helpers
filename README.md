@@ -7,6 +7,9 @@
 
 ## Installation
 
+First go to the website [barryvdh/laravel-dompdf](https://packagist.org/packages/barryvdh/laravel-dompdf) and configure the package before this installation. Then do these procedures:
+
+
 ```sh
 composer require canducci/laravel-dompdf-helpers
 ```
