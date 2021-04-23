@@ -63,6 +63,3 @@ $instance->stream(); // or $instance->download();
 ```php
 return report_html_stream($path); // or report_html_download($path);
 ```
-
-
-
