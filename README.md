@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/packagist/v/canducci/laravel-dompdf-helpers.svg?label=version)](https://packagist.org/packages/canducci/laravel-dompdf-helpers)
 [![Downloads](https://img.shields.io/packagist/dt/canducci/laravel-dompdf-helpers.svg?style=flat)](https://packagist.org/packages/canducci/laravel-dompdf-helpers)
-[![PHP Composer](https://github.com/canducci/laravel-dompdf-helpers/workflows/PHP%20Composer/badge.svg)](https://packagist.org/packages/canducci/laravel-dompdf-helpers)
+[![PHP Composer](https://github.com/fulviocanducci/laravel-dompdf-helpers/actions/workflows/php.yml/badge.svg)](https://github.com/fulviocanducci/laravel-dompdf-helpers/actions/workflows/php.yml)
 [![License](https://img.shields.io/packagist/l/canducci/laravel-dompdf-helpers.svg)](https://packagist.org/packages/canducci/laravel-dompdf-helpers)
 
 ## Installation
